@@ -72,12 +72,27 @@ a {
 .blurb:not(:last-child){
 	margin-right: 1em;
 }
+@media (max-width: 500px) {
+    .blurb {
+        margin: 3em 0;
+    }
+}
 .blurb-container {
 	display: flex;
 	justify-content: space-between;
 }
+@media (max-width: 500px) {
+    .blurb-container {
+        display: block;
+    }
+}
 .blurb-section {
 	padding: 2em 0;
+}
+@media (max-width: 500px) {
+    .blurb-section {
+        padding: 0;
+    }
 }
 body {
 	max-width: 1024px;
@@ -91,9 +106,20 @@ body {
         padding: 0 2em 4em;
     }
 }
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+}
 .contact-section {
 	padding: 2em 0;
 	border-bottom: none;
+}
+@media (max-width: 500px) {
+    .contact-section {
+        padding: 1.5em 0 0;
+        margin-bottom: 0;
+    }
 }
 .contact-section p {
 	margin: 1em 0;
@@ -121,13 +147,24 @@ body {
 footer {
 	padding: 2em 0;
 }
+
 header {
 	padding: 2em 0;
 }
+@media (max-width: 500px) {
+    header {
+        padding: 0;
+    }
+}
 @media (max-width: 800px) {
-    header img {
+    header .tablet-logo {
         display: block;
         margin: 0 auto 2em;
+    }
+}
+@media (max-width: 500px) {
+    header .tablet-logo {
+        display: none;
     }
 }
 .hero-section {
@@ -175,12 +212,27 @@ nav a {
         font-size: 1em;
     }
 }
+@media (max-width: 500px) {
+    nav a {
+        border-bottom: 1px solid gray;
+        font-size: 1.25em;
+        order: 2;
+        padding: 1.25rem;
+        text-align: center;
+        width: 100%;
+    }
 nav a:hover, nav a:active {
 	text-decoration: underline;
 }
 @media (max-width: 800px) {
     nav a.logo {
         display: none;
+    }
+}
+@media (max-width: 500px) {
+    nav a.logo {
+        display: block;
+        order: 1;
     }
 }
 p {
@@ -195,9 +247,19 @@ p {
 section {
 	border-bottom: 1px solid black;
 }
+@media (max-width: 500px) {
+    section {
+        margin: 1em;
+    }
+}
 section img {
 	margin: 32px 0;
 	width: 100%;
+}
+@media (max-width: 500px) {
+    section img {
+        margin: 0;
+    }
 }
 .service {
 	border: 1px solid black;
