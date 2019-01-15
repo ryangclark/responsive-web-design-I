@@ -150,13 +150,28 @@ footer {
 
 header {
 	padding: 2em 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+	header img {
+		order: -1;
+		margin: 0 auto 30px;
+	}
+}
+@media (max-width: 500px) {
+	header img {
+		order: -1;
+		margin: 24px auto 16px;
+	}
 }
 @media (max-width: 500px) {
     header {
         padding: 0;
     }
 }
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     header .tablet-logo {
         display: block;
         margin: 0 auto 2em;
@@ -166,7 +181,7 @@ header {
     header .tablet-logo {
         display: none;
     }
-}
+} */
 .hero-section {
 	display: flex;
 	justify-content: space-between;
@@ -200,7 +215,14 @@ nav {
 	display: flex;
 	justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	/* margin-right: 32px; */
+}
+@media (max-width: 500px) {
+	nav {
+		border-top: 1px solid gray;
+	}
 }
 nav a {
 	color: gray;
@@ -220,15 +242,16 @@ nav a {
         padding: 1.25rem;
         text-align: center;
         width: 100%;
-    }
+	}
+}
 nav a:hover, nav a:active {
 	text-decoration: underline;
 }
-@media (max-width: 800px) {
-    nav a.logo {
+/* @media (max-width: 800px) {
+    .logo {
         display: none;
     }
-}
+} */
 @media (max-width: 500px) {
     nav a.logo {
         display: block;
